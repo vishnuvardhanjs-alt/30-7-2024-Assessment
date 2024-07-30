@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pan Card Checker</title>
+    <script>
+      console.log("hello")
+      let pattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+
+      function match() {
+        let form_data = document.getElementById("form_data");
+        if (pattern.test(form_data.value)) {
+          document.getElementById("result").innerHTML =
+            "Valid PAN Card Number!...";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Please Enter a Valid PAN Card Number!...";
+        }
+      }
+    </script>
+    <style>
+      #result {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <label>PAN: </label>
+    <input type="text" id="form_data" />
+    <span id="result"></span>
+    <br />
+    <button onclick="match()">Submit</button>
+  </body>
+</html>
