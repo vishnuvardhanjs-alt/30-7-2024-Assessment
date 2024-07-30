@@ -74,7 +74,7 @@
           let removeList = document.createElement("button");
           removeList.textContent = "DELETE";
           removeList.addEventListener("click", ()=>{
-          table.deleteRow()
+          table.deleteRow(newRow)
           })
           newRow.insertCell(0).innerHTML = formData[0].value;
           newRow.insertCell(1).innerHTML = formData[1].value;
